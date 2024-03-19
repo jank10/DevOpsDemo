@@ -118,12 +118,20 @@ export class GuiModel {
                         {
                             "type": "newButton",
                             "name": { default: "Neues ToDo"},
-                            "icon": "fa-user",
-                            "color": "green",
+                            "icon": "fa-file",
+                            "color": "magenta",
                             "width": 2,
                             "form" : {
                                 "form" : "ToDoForm"
                             }
+                        },
+                        {
+                            "type": "linkButton",
+                            "name": {default: "Take me to Moodle"},
+                            "url": "https://moodle.zhaw.ch/",
+                            "icon": "fa-school",
+                            "color": "blue",
+                            "width": 2,
                         },
                         {
                             "type": "list",
@@ -136,6 +144,8 @@ export class GuiModel {
                                 "form": "ToDoForm"
                             }
                         }
+
+                        
                     ]
                 },
             ]
