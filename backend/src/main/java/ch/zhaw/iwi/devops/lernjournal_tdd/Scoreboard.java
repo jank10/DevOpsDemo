@@ -24,4 +24,15 @@ public class Scoreboard {
             return String.format("%03d:%03d", scoreTeamA, scoreTeamB);
     }
 
+    // Methods to record points for Team A
+    public void scoreTeamA1(){
+        scoreTeamA += 1;
+    }
+    public void scoreTeamA2(){
+        scoreTeamA += 2;
+    }
+    public void scoreTeamA3(){
+        scoreTeamA += 3;
+    }
+
 }
