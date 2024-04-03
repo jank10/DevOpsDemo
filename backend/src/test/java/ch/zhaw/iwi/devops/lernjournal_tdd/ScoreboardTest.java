@@ -80,4 +80,19 @@ public class ScoreboardTest {
         assertEquals("001:002", scoreboard.getFormattedScore());
 
     }
+
+    @Test
+    // Test that the deductPoints function can't make the total score negative
+    public void notNegativeTest(){
+        
+        scoreboard.scoreTeamA3();
+        scoreboard.scoreTeamB2();
+        scoreboard.scoreTeamB1();
+
+        scorekeeper.deductPointsTeamX("A", -4);
+        scorekeeper.deductPointsTeamX("B",-4);
+
+        assertEquals("003:003", scoreboard.getFormattedScore());
+
+    }
 }
