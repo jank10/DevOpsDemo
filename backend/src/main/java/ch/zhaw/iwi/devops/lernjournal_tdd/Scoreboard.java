@@ -23,7 +23,11 @@ public class Scoreboard {
 
     // Method to get the current score of both teams in the format "000:000"
     public String getFormattedScore(){
+        if(scoreTeamA < 1000 && scoreTeamB < 1000){
             return String.format("%03d:%03d", scoreTeamA, scoreTeamB);
+        } else {
+            return "scores are bound to 3 digits";
+        }
     }
 
     // Methods to record points for Team A
