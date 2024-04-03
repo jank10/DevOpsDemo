@@ -66,7 +66,7 @@ public class ScoreboardTest {
     }
 
     @Test
-    // Test if the the programm can deduct any amount of points from the scoreboard
+    // Test if the the programm can change any amount of points from the scoreboard
     public void deductPointsTest(){
         
         scoreboard.scoreTeamA3();

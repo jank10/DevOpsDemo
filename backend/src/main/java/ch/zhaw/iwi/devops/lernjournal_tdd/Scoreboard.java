@@ -69,4 +69,14 @@ public class Scoreboard {
         }
     }
 
+    //Methods to deduct points from the scoreboard
+    public void deductPointsTeamX(String team ,int points){
+        if(team.equals("A")){
+            scoreTeamA += points;
+        } else if(team.equals("B")){
+                scoreTeamB += points;
+        } else{
+            System.out.println("Team not valid. Try again.");
+        }
+    }
 }
