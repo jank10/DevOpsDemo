@@ -51,4 +51,17 @@ public class ScoreboardTest {
         assertEquals("000:006", scoreboard.getFormattedScore());
 
     }
+
+    @Test
+    // Test if the the programm can undo the last score that has been entered
+    public void undoLastscoreTest(){
+        
+        scoreboard.scoreTeamA3();
+        scoreboard.scoreTeamB2();
+        scoreboard.scoreTeamB1();
+
+        scoreboard.undoLastscore();
+        assertEquals("003:002", scoreboard.getFormattedScore());
+
+    }
 }
