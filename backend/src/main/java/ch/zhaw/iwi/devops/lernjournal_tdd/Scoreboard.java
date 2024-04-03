@@ -91,4 +91,13 @@ public class Scoreboard {
             System.out.println("Team not valid. Try again.");
         }
     }
+
+    //Method to determine the winner
+    public String getWinner(){
+        if(scoreTeamA > scoreTeamB){
+            return "Team A";
+        } else {
+            return "Team B";
+        }
+    }
 }
