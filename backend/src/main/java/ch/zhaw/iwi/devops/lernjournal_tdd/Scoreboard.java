@@ -35,4 +35,15 @@ public class Scoreboard {
         scoreTeamA += 3;
     }
 
+    // Methods to record points for Team B
+     public void scoreTeamB1(){
+        scoreTeamB += 1;
+    }
+    public void scoreTeamB2(){
+        scoreTeamB += 2;
+    }
+    public void scoreTeamB3(){
+        scoreTeamB += 3;
+    }
+
 }
