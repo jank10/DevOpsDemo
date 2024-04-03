@@ -40,4 +40,15 @@ public class ScoreboardTest {
         assertEquals("006:000", scoreboard.getFormattedScore());
 
     }
+
+    @Test
+    // Test if the the programm can correctly record scores for team A
+    public void scoreTeamBTest(){
+       
+        scoreboard.scoreTeamB1();
+        scoreboard.scoreTeamB2();
+        scoreboard.scoreTeamB3();
+        assertEquals("000:006", scoreboard.getFormattedScore());
+
+    }
 }
