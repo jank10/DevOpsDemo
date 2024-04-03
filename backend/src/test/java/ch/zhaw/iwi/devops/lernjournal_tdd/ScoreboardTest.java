@@ -131,4 +131,15 @@ public class ScoreboardTest {
 
     }
 
+    @Test
+    // Test if the the programm can correctly spot a tie
+    public void tieTest(){
+        
+        scoreboard.scoreTeamA3();
+        scoreboard.scoreTeamB3();
+
+        assertEquals("it's a tie!", scoreboard.getWinner());
+
+    }    
+
 }
