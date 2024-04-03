@@ -19,4 +19,9 @@ public class Scoreboard {
         return scoreTeamB;
     }
 
+    // Method to get the current score of both teams in the format "000:000"
+    public String getFormattedScore(){
+            return String.format("%03d:%03d", scoreTeamA, scoreTeamB);
+    }
+
 }
