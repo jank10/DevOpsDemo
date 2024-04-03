@@ -64,4 +64,20 @@ public class ScoreboardTest {
         assertEquals("003:002", scoreboard.getFormattedScore());
 
     }
+
+    @Test
+    // Test if the the programm can deduct any amount of points from the scoreboard
+    public void deductPointsTest(){
+        
+        scoreboard.scoreTeamA3();
+        scoreboard.scoreTeamB2();
+        scoreboard.scoreTeamB1();
+
+        scoreboard.deductPointsTeamX("A",-2);
+        scoreboard.deductPointsTeamX("B",-3);
+        scoreboard.deductPointsTeamX("B",2);
+
+        assertEquals("001:002", scoreboard.getFormattedScore());
+
+    }
 }
