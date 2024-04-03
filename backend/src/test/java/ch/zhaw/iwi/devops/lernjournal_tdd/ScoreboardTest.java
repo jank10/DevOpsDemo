@@ -108,4 +108,27 @@ public class ScoreboardTest {
         assertEquals("scores are bound to 3 digits", scoreboard.getFormattedScore());
 
     }  
+
+    @Test
+    // Test if the the programm can correctly spot Team A as the winner
+    public void winnerTeamATest(){
+        
+        scoreboard.scoreTeamA3();
+        scoreboard.scoreTeamB2();
+
+        assertEquals("Team A", scoreboard.getWinner());
+
+    }
+
+    @Test
+    // Test if the the programm can correctly spot Team B as the winner
+    public void winnerTeamBTest(){
+        
+        scoreboard.scoreTeamA2();
+        scoreboard.scoreTeamB3();
+
+        assertEquals("Team B", scoreboard.getWinner());
+
+    }
+
 }
