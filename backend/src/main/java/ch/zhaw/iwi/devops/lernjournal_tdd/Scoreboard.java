@@ -72,9 +72,17 @@ public class Scoreboard {
     //Methods to deduct points from the scoreboard
     public void deductPointsTeamX(String team ,int points){
         if(team.equals("A")){
-            scoreTeamA += points;
+            if(scoreTeamA + points <= 0){
+                System.out.println("Error: score can't be negative.");
+            }else{
+                scoreTeamA += points;
+            } 
         } else if(team.equals("B")){
+            if(scoreTeamB + points <= 0){
+                System.out.println("Error: score can't be negative.");
+            }else{
                 scoreTeamB += points;
+            } 
         } else{
             System.out.println("Team not valid. Try again.");
         }

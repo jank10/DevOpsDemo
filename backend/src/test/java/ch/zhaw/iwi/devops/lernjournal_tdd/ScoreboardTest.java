@@ -89,8 +89,8 @@ public class ScoreboardTest {
         scoreboard.scoreTeamB2();
         scoreboard.scoreTeamB1();
 
-        scorekeeper.deductPointsTeamX("A", -4);
-        scorekeeper.deductPointsTeamX("B",-4);
+        scoreboard.deductPointsTeamX("A", -4);
+        scoreboard.deductPointsTeamX("B",-4);
 
         assertEquals("003:003", scoreboard.getFormattedScore());
 
