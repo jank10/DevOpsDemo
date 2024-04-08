@@ -66,6 +66,19 @@ public class ScoreboardTest {
     }
 
     @Test
+    // Test if the the programm can undo the last score that has been entered
+    public void undoLastscoreTestteamA(){
+        
+        scoreboard.scoreTeamA3();
+        scoreboard.scoreTeamB2();
+        scoreboard.scoreTeamA1();
+
+        scoreboard.undoLastscore();
+        assertEquals("003:002", scoreboard.getFormattedScore());
+    }
+
+
+    @Test
     // Test if the the programm can change any amount of points from the scoreboard
     public void deductPointsTest(){
         
