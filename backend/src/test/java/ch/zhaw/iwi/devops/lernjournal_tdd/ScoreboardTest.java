@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class ScoreboardTest {
+class ScoreboardTest {
    
     private Scoreboard scoreboard;
 
@@ -67,7 +67,7 @@ public class ScoreboardTest {
 
     @Test
     // Test if the the programm can undo the last score that has been entered
-    public void undoLastscoreTestteamA(){
+    void undoLastscoreTestteamA(){
         
         scoreboard.scoreTeamA3();
         scoreboard.scoreTeamB2();
