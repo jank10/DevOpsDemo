@@ -131,10 +131,23 @@ class ScoreboardTest {
 
     @Test
     // Test boundary cases: extreme values. The score cannot be 4 digits
-    public void extremeValuesTest(){
+    public void extremeValuesTestA(){
         
-        while(scoreboard.getScoreteamA() < 1001 || scoreboard.getScoreteamB() < 1001){
+        while(scoreboard.getScoreteamA() < 1001){
             scoreboard.scoreTeamA1();
+    
+        }
+
+        assertEquals("scores are bound to 3 digits", scoreboard.getFormattedScore());
+
+    }  
+
+    @Test
+    // Test boundary cases: extreme values. The score cannot be 4 digits
+    public void extremeValuesTestB(){
+        
+        while(scoreboard.getScoreteamB() < 1001){
+
             scoreboard.scoreTeamB1();
         }
 
