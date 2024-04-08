@@ -2,6 +2,8 @@ package ch.zhaw.iwi.devops.lernjournal_tdd;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -93,6 +95,24 @@ class ScoreboardTest {
         assertEquals("001:002", scoreboard.getFormattedScore());
 
     }
+
+    @Test
+    // Test if the the programm can change any amount of points from the scoreboard
+    public void deductPointsTest2(){
+        
+        scoreboard.scoreTeamA3();
+        scoreboard.scoreTeamB2();
+        scoreboard.scoreTeamB1();
+
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        scoreboard.deductPointsTeamX("C", 3);
+        System.setOut(System.out);
+        assertEquals("Team not valid. Try again.\n", outContent.toString());
+
+    }
+
 
     @Test
     // Test that the deductPoints function can't make the total score negative
