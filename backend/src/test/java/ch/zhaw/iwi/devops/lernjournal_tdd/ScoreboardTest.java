@@ -13,20 +13,20 @@ class ScoreboardTest {
 
     //Create a @BeforeEach test to initialize a new Scoreboard every time the test is run
     @BeforeEach
-    public void initializeScoreboard(){
+    void initializeScoreboard(){
         scoreboard = new Scoreboard();
     }
     
     @Test
     // Test if the initial score is 0:0
-    public void initialscoreTest(){
+    void initialscoreTest(){
         // Assert that the initial score is "0:0"
         assertEquals(0, scoreboard.getScoreteamA()+scoreboard.getScoreteamB());
     }
 
     @Test
     // Test that the programm can give back the score of both teams in the format "000:000"
-    public void getFormattedscoreTest(){
+    void getFormattedscoreTest(){
 
         // Assert that the initial score is "0:0"
         assertEquals("000:000", scoreboard.getFormattedScore());
@@ -34,7 +34,7 @@ class ScoreboardTest {
 
     @Test
     // Test if the the programm can correctly record scores for team A
-    public void scoreTeamATest(){
+    void scoreTeamATest(){
        
         scoreboard.scoreTeamA1();
         scoreboard.scoreTeamA2();
@@ -45,7 +45,7 @@ class ScoreboardTest {
 
     @Test
     // Test if the the programm can correctly record scores for team A
-    public void scoreTeamBTest(){
+    void scoreTeamBTest(){
        
         scoreboard.scoreTeamB1();
         scoreboard.scoreTeamB2();
@@ -56,7 +56,7 @@ class ScoreboardTest {
 
     @Test
     // Test if the the programm can undo the last score that has been entered
-    public void undoLastscoreTest(){
+    void undoLastscoreTest(){
         
         scoreboard.scoreTeamA3();
         scoreboard.scoreTeamB2();
@@ -82,7 +82,7 @@ class ScoreboardTest {
 
     @Test
     // Test if the the programm can change any amount of points from the scoreboard
-    public void deductPointsTest(){
+    void deductPointsTest(){
         
         scoreboard.scoreTeamA3();
         scoreboard.scoreTeamB2();
@@ -116,7 +116,7 @@ class ScoreboardTest {
 
     @Test
     // Test that the deductPoints function can't make the total score negative
-    public void notNegativeTest(){
+    void notNegativeTest(){
         
         scoreboard.scoreTeamA3();
         scoreboard.scoreTeamB2();
@@ -131,7 +131,7 @@ class ScoreboardTest {
 
     @Test
     // Test boundary cases: extreme values. The score cannot be 4 digits
-    public void extremeValuesTestA(){
+    void extremeValuesTestA(){
         
         while(scoreboard.getScoreteamA() < 1001){
             scoreboard.scoreTeamA1();
@@ -168,7 +168,7 @@ class ScoreboardTest {
 
     @Test
     // Test if the the programm can correctly spot Team B as the winner
-    public void winnerTeamBTest(){
+    void winnerTeamBTest(){
         
         scoreboard.scoreTeamA2();
         scoreboard.scoreTeamB3();
@@ -179,7 +179,7 @@ class ScoreboardTest {
 
     @Test
     // Test if the the programm can correctly spot a tie
-    public void tieTest(){
+    void tieTest(){
         
         scoreboard.scoreTeamA3();
         scoreboard.scoreTeamB3();
