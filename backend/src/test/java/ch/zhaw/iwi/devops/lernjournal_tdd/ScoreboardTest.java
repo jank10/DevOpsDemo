@@ -98,7 +98,7 @@ class ScoreboardTest {
 
     @Test
     // Test if the the programm can change any amount of points from the scoreboard
-    public void deductPointsTest2(){
+    void deductPointsTest2(){
         
         scoreboard.scoreTeamA3();
         scoreboard.scoreTeamB2();
