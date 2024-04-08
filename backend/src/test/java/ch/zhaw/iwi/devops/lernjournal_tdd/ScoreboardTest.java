@@ -144,7 +144,7 @@ class ScoreboardTest {
 
     @Test
     // Test boundary cases: extreme values. The score cannot be 4 digits
-    public void extremeValuesTestB(){
+    void extremeValuesTestB(){
         
         while(scoreboard.getScoreteamB() < 1001){
 
@@ -157,7 +157,7 @@ class ScoreboardTest {
 
     @Test
     // Test if the the programm can correctly spot Team A as the winner
-    public void winnerTeamATest(){
+    void winnerTeamATest(){
         
         scoreboard.scoreTeamA3();
         scoreboard.scoreTeamB2();
