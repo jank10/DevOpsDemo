@@ -96,7 +96,7 @@ public class Scoreboard {
     public String getWinner(){
         if(scoreTeamA > scoreTeamB){
             return "Team A";
-        } else if(scoreTeamA > scoreTeamB){
+        } else if(scoreTeamA < scoreTeamB){
             return "Team B";
         } else{
             return "it's a tie!";
