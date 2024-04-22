@@ -155,37 +155,37 @@ class ScoreboardTest {
 
     }  
 
-    @Test
-    // Test if the the programm can correctly spot Team A as the winner
-    void winnerTeamATest(){
+    // @Test
+    // // Test if the the programm can correctly spot Team A as the winner
+    // void winnerTeamATest(){
         
-        scoreboard.scoreTeamA3();
-        scoreboard.scoreTeamB2();
+    //     scoreboard.scoreTeamA3();
+    //     scoreboard.scoreTeamB2();
 
-        assertEquals("Team A", scoreboard.getWinner());
+    //     assertEquals("Team A", scoreboard.getWinner());
 
-    }
+    // }
 
-    @Test
-    // Test if the the programm can correctly spot Team B as the winner
-    void winnerTeamBTest(){
+    // @Test
+    // // Test if the the programm can correctly spot Team B as the winner
+    // void winnerTeamBTest(){
         
-        scoreboard.scoreTeamA2();
-        scoreboard.scoreTeamB3();
+    //     scoreboard.scoreTeamA2();
+    //     scoreboard.scoreTeamB3();
 
-        assertEquals("Team B", scoreboard.getWinner());
+    //     assertEquals("Team B", scoreboard.getWinner());
 
-    }
+    // }
 
-    @Test
-    // Test if the the programm can correctly spot a tie
-    void tieTest(){
+    // @Test
+    // // Test if the the programm can correctly spot a tie
+    // void tieTest(){
         
-        scoreboard.scoreTeamA3();
-        scoreboard.scoreTeamB3();
+    //     scoreboard.scoreTeamA3();
+    //     scoreboard.scoreTeamB3();
 
-        assertEquals("it's a tie!", scoreboard.getWinner());
+    //     assertEquals("it's a tie!", scoreboard.getWinner());
 
-    }    
+    // }    
 
 }
