@@ -119,7 +119,7 @@ export class GuiModel {
                             "type": "newButton",
                             "name": { default: "Neues ToDo"},
                             "icon": "fa-file",
-                            "color": "green",
+                            "color": "blue",
                             "width": 2,
                             "form" : {
                                 "form" : "ToDoForm"
