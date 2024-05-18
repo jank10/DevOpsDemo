@@ -114,13 +114,13 @@ export class GuiModel {
                     "elementList": [
                         {
                             "type": "backbutton",
-                            "color": "green"
+                    
                         },
                         {
                             "type": "newButton",
                             "name": { default: "Neues ToDo"},
                             "icon": "fa-file",
-                            "color": "blue",
+                            "color": "green",
                             "width": 2,
                             "form" : {
                                 "form" : "ToDoForm"
