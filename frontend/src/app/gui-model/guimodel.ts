@@ -114,6 +114,7 @@ export class GuiModel {
                     "elementList": [
                         {
                             "type": "backbutton",
+                            "color": "green"
                         },
                         {
                             "type": "newButton",
