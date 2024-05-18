@@ -1,4 +1,4 @@
-name: azure docker deployment
+name: azure docker deployment_v2
 
 on:
   push:
